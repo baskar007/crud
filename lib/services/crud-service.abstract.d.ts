@@ -1,5 +1,6 @@
 import { BadRequestException, NotFoundException } from '@nestjs/common';
 import { ParsedRequestParams } from '@nestjsx/crud-request';
+import { DeepPartial } from 'typeorm';
 import { CreateManyDto, CrudRequest, CrudRequestOptions, GetManyDefaultResponse, QueryOptions } from '../interfaces';
 export declare abstract class CrudService<T> {
     abstract getMany(req: CrudRequest): Promise<GetManyDefaultResponse<T> | T[]>;
